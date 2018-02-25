@@ -1,0 +1,23 @@
+{
+  "name": "Friend-Finder",
+  "version": "1.0.0",
+  "description": "A friend compatibility app that matches people based on survey responses",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxrjohnson23/Friend-Finder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maxrjohnson23/Friend-Finder/issues"
+  },
+  "homepage": "https://github.com/maxrjohnson23/Friend-Finder#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
