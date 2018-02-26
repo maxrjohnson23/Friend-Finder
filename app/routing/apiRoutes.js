@@ -10,14 +10,15 @@ apiRoutes.post("/friends", (req, res) => {
     const userScores = userInfo.scores;
 
     if (userScores) {
-        findClosestMatch(userScores);
+        let closestFriend = findClosestMatch(userScores);
+        friendList.push(userInfo);
+        res.send(closestFriend);
+
     } else {
         res.status(500).send("Invalid user data");
     }
 
 
-    //friendList.push(user);
-    res.send(userInfo);
 });
 
 
@@ -33,6 +34,7 @@ function findClosestMatch(userScores) {
         }
     });
     console.log(`Closest friend: ${closestMatch.name}`);
+    return closestMatch;
 }
 
 function calcScoreDifference(friendScores, userScores) {
