@@ -1,11 +1,12 @@
 const apiRoutes = require("express").Router();
+const friendList = require("../data/friends");
 
-apiRoutes.get("/api/friends", (req, res) => {
-
+apiRoutes.get("/friends", (req, res) => {
+    res.send(friendList);
 });
 
-apiRoutes.post("/api/friends", (req, res) => {
-    
+apiRoutes.post("/friends", (req, res) => {
+
 });
 
 module.exports = apiRoutes;
