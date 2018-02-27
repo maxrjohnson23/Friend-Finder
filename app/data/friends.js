@@ -1,7 +1,6 @@
 const request = require('request');
 
-
-// Populate friends list with 20 random people
+// Populate friends list with 20 random people from RandomUser API
 function retrieveFriendList() {
     return new Promise((resolve, reject) => {
         request('https://www.randomuser.me/api?results=20&nat=us', function (error, response, body) {
@@ -19,12 +18,12 @@ function retrieveFriendList() {
 function populateUsers(data) {
     let friendData = [];
     data.forEach(person => {
-        let user = {
+        let newUser = {
             name: `${person.name.first} ${person.name.last}`,
             photo: person.picture.large,
             scores: generateRandomScores()
         };
-        friendData.push(user);
+        friendData.push(newUser);
     });
     return friendData;
 }
