@@ -1,7 +1,7 @@
 let friendList = [
     {
         "name": "A",
-        "photo": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        "photo": "https://randomuser.me/api/portraits/men/83.jpg",
         "scores": [
             5,
             1,
@@ -17,7 +17,7 @@ let friendList = [
     },
     {
         "name": "B",
-        "photo": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        "photo": "https://randomuser.me/api/portraits/men/83.jpg",
         "scores": [
             3,
             2,
@@ -33,7 +33,7 @@ let friendList = [
     },
     {
         "name": "C",
-        "photo": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        "photo": "https://randomuser.me/api/portraits/men/83.jpg",
         "scores": [
             1,
             5,
@@ -49,7 +49,7 @@ let friendList = [
     },
     {
         "name": "D",
-        "photo": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        "photo": "https://randomuser.me/api/portraits/men/83.jpg",
         "scores": [
             3,
             5,
@@ -65,7 +65,7 @@ let friendList = [
     },
     {
         "name": "E",
-        "photo": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        "photo": "https://randomuser.me/api/portraits/men/83.jpg",
         "scores": [
             3,
             2,

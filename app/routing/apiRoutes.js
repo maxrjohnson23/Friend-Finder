@@ -7,10 +7,9 @@ apiRoutes.get("/friends", (req, res) => {
 
 apiRoutes.post("/friends", (req, res) => {
     const userInfo = req.body;
-    const userScores = userInfo.scores;
 
-    if (userScores) {
-        let closestFriend = findClosestMatch(userScores);
+    if (userInfo) {
+        let closestFriend = findClosestMatch(userInfo);
         friendList.push(userInfo);
         res.send(closestFriend);
 
@@ -22,22 +21,29 @@ apiRoutes.post("/friends", (req, res) => {
 });
 
 
-function findClosestMatch(userScores) {
-    console.log(`User scores: ${userScores}`);
+function findClosestMatch(userInfo) {
+    let userScores = userInfo.userScores;
+
+    // Initialize closest match
     let closestMatch = friendList[0];
     let closestScore = Infinity;
+
     friendList.forEach(friend => {
-        let totalDifference = calcScoreDifference(friend.scores, userScores);
-        if (totalDifference < closestScore) {
-            closestScore = totalDifference;
-            closestMatch = friend;
+        // Don't match returning user with themselves
+        if (userInfo.name !== friend.name) {
+            let totalDifference = calcScoreDifference(friend.scores, userScores);
+            if (totalDifference < closestScore) {
+                closestScore = totalDifference;
+                closestMatch = friend;
+            }
         }
     });
-    console.log(`Closest friend: ${closestMatch.name}`);
+
     return closestMatch;
 }
 
 function calcScoreDifference(friendScores, userScores) {
+    // Map and reduce user scores to the total difference, lower is a closer friend match
     let scoreDifferences = friendScores.map((score, index) => {
         return Math.abs(score - userScores[index]);
     });
