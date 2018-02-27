@@ -1,25 +1,20 @@
 const request = require('request');
 
-const options = {
-    hostname: 'randomuser.me',
-    port: 443,
-    path: '/api/?results=20',
-    method: 'GET'
-};
-
-let friendList = [];
+let friendData = [];
 
 // Populate friends list with 20 random people
 function retrieveFriendList() {
-    request('https://www.randomuser.me/api?results=20&nat=us', function (error, response, body) {
-        if (error) {
-            console.log(error);
-        } else {
-            // Populate friends list
-            console.log(JSON.parse(body));
-            populateUsers(JSON.parse(body).results);
-            console.log(friendList);
-        }
+    return new Promise((resolve, reject) => {
+        request('https://www.randomuser.me/api?results=20&nat=us', function (error, response, body) {
+            if (error) {
+                console.log(error);
+                reject(error);
+            } else {
+                // Populate friends list
+                let friendList = populateUsers(JSON.parse(body).results);
+                resolve(friendList);
+            }
+        });
     });
 }
 
@@ -30,7 +25,7 @@ function populateUsers(data) {
             photo: person.picture.large,
             scores: generateRandomScores()
         };
-        friendList.push(user);
+        friendData.push(user);
     });
 }
 
@@ -43,7 +38,5 @@ function generateRandomScores() {
     return scores;
 }
 
-retrieveFriendList();
 
-
-module.exports = friendList;
+module.exports = retrieveFriendList;
