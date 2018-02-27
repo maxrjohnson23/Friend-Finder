@@ -2,9 +2,11 @@ const apiRoutes = require("express").Router();
 const friendData = require("../data/friends");
 
 let friendList = [];
-friendData.then((err, friends) => {
+// Fetch friends list on startup
+friendData().then(friends => {
     friendList = friends;
-    console.log(friendList);
+}).catch(err => {
+    console.log(`An error occurred while retrieving friends: ${err}`);
 });
 
 apiRoutes.get("/friends", (req, res) => {
@@ -22,13 +24,11 @@ apiRoutes.post("/friends", (req, res) => {
     } else {
         res.status(500).send("Invalid user data");
     }
-
-
 });
 
 
 function findClosestMatch(userInfo) {
-    let userScores = userInfo.userScores;
+    let userScores = userInfo.scores;
 
     // Initialize closest match
     let closestMatch = friendList[0];

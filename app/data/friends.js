@@ -1,13 +1,11 @@
 const request = require('request');
 
-let friendData = [];
 
 // Populate friends list with 20 random people
 function retrieveFriendList() {
     return new Promise((resolve, reject) => {
         request('https://www.randomuser.me/api?results=20&nat=us', function (error, response, body) {
             if (error) {
-                console.log(error);
                 reject(error);
             } else {
                 // Populate friends list
@@ -19,6 +17,7 @@ function retrieveFriendList() {
 }
 
 function populateUsers(data) {
+    let friendData = [];
     data.forEach(person => {
         let user = {
             name: `${person.name.first} ${person.name.last}`,
@@ -27,6 +26,7 @@ function populateUsers(data) {
         };
         friendData.push(user);
     });
+    return friendData;
 }
 
 function generateRandomScores() {
