@@ -14,6 +14,15 @@
     margin-bottom: 30px;
 }
 
+.form-group label {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#match-name {
+    text-transform: capitalize;
+}
+
 footer {
     margin: 8px 0 40px 0;
 }

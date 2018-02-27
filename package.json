@@ -19,6 +19,7 @@
   "homepage": "https://github.com/maxrjohnson23/Friend-Finder#readme",
   "dependencies": {
     "body-parser": "latest",
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "request": "^2.83.0"
   }
 }
