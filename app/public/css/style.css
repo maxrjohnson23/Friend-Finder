@@ -1,0 +1,19 @@
+* {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.jumbotron {
+    padding: 60px;
+}
+
+.jumbotron h1 {
+    font-size: 63px;
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+footer {
+    margin: 8px 0 40px 0;
+}
