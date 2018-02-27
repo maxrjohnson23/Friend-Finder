@@ -13,7 +13,7 @@ A friend compatibility app that matches people based on survey responses
 
 
 
-![Friend Finder Screenshot](sample/friendfinder.jpg?raw=true "Friend Finder")
+![Friend Finder Screenshot](sample/friendfinder.png?raw=true "Friend Finder")
 
 
 ### Prerequisites
@@ -35,7 +35,7 @@ A friend compatibility app that matches people based on survey responses
    
 ### Application Design
 <p align="center">
-   <img src="samples/app_diagram.png?raw=true" alt="Application Design" width="400px" align="center" />
+   <img src="samples/app_diagram.png?raw=true" alt="Application Design" width="600px" align="center" />
 </p>
 
 
@@ -46,8 +46,8 @@ A friend compatibility app that matches people based on survey responses
    $ node server.js
    ```
 
-2. Navigate to localhost:3000 and take the survey
+2. Navigate to localhost:3000
 
-3. Friend results are calculated on survey answers and use data from the RandomUser API
+3. Take the survey and view your matches! Friend results are calculated on survey answers and source data from the RandomUser API
 
    
