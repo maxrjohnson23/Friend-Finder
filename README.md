@@ -13,7 +13,7 @@ A friend compatibility app that matches people based on survey responses
 
 
 
-![Friend Finder Screenshot](sample/friendfinder.png?raw=true "Friend Finder")
+![Friend Finder Screenshot](samples/friendfinder.png?raw=true "Friend Finder")
 
 
 ### Prerequisites
