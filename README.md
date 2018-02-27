@@ -11,6 +11,7 @@ A friend compatibility app that matches people based on survey responses
     * Backend API calls
 * [RandomUser API](https://randomuser.me/) 
 
+## [View Site](https://gentle-river-15192.herokuapp.com/ "Friend Finder")
 
 
 ![Friend Finder Screenshot](samples/friendfinder.png?raw=true "Friend Finder")
